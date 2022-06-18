@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --pink: hsl(322, 100%, 66%);
+    --palecyan: hsl(193, 100%, 96%);
+    --darkcyan: hsl(192, 100%, 9%);
+    --grayishblue: hsl(208, 11%, 55%);
+}
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+section{
+    /* background-image: url(images\bg-hero-mobile.svg); */
+    width:90%;
+    /* max-width: 375px; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
