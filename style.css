@@ -130,7 +130,8 @@ right1{
     margin-right: auto;
 }
 
-.row5{Display: flex;
+.row5{
+Display: flex;
 flex-direction:column;
 width:90%;
 padding: 10px 5%;
@@ -138,10 +139,11 @@ color: var(--darkcyan);
 justify-content: center;
 align-items: center;
 border: 2px solid lightgrey;
-/* margin-bottom: 50px; */
+margin-bottom: 20%;
 border-radius: 20px;
 margin-left: auto;
 margin-right: auto;
+
 }
 
 .getstarted2{
@@ -154,22 +156,19 @@ margin-right: auto;
 
 }
 /* create empty space beneath text for overlap area */
-.right5{
-    margin-bottom: 22%; 
-}
 
 /* create overlap using - top margin and background color */
 .row6{
     Display: flex;
     flex-direction:column;
-    width:80%;
+    width:85%;
     padding: 10px 5%;
     color: var(--darkcyan);
     justify-content: center;
     align-items: center;
     border: 2px solid lightgrey;
     /* margin-bottom: 50px; */
-    margin-top: -205%;
+    margin-top: -190%;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -199,7 +198,7 @@ margin-right: auto;
 .row7{
     Display: flex;
     flex-direction:column;
-    width:90%;
+    width:100%;
     padding: 10px 5%;
     color: white;
     justify-content: center;
@@ -208,7 +207,8 @@ margin-right: auto;
     margin-top: 0%;
     /* margin-bottom: 50px; */
     margin-top: 0%;
-    border-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
@@ -222,4 +222,124 @@ margin-right: auto;
 }
 .right7a div{
     padding-right:20px;
+}
+@media screen and (max-width:1440px) and (min-width: 377px)
+{
+body{
+        max-width: 1441px;
+    }
+.background
+    {
+        background-image: url("images\bg-hero-desktop.svg");
+        width:100%;
+    }
+/* convert the columns from mobile view into rows or desktop view */
+    .row2 
+    {
+        width: 100%;
+        flex-flow: row nowrap;
+        margin:0px;
+    }
+    .row4{
+            width: 100%;
+            flex-flow: row nowrap;
+            margin-bottom:50px;
+    }
+    /* align the text halves for each row to the left */
+    .left2
+    {
+        width:45%;
+        text-align: left;
+        margin-right: auto;
+        /* border: 2px solid black; */
+    }
+    .right4{
+        width:45%;
+        text-align: left;
+        
+    }
+    /* center the image halves for each row */
+    .right2{
+        width:45%;
+        justify-content: left;
+        /* border: 2px solid black; */
+    }
+    .left3{
+        width:45%;
+        justify-content: left;
+    }
+    .left4{
+        width:45%;
+        justify-content: left;
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-right: auto;
+    }
+    /* convert colums to rows and reverse order to match layout */
+    .row3, .row5 {
+        width: 100%;
+        flex-flow: row-reverse;
+    }
+
+/* these are texts on the reversed rows */
+.right3{
+    width:45%;
+    text-align: left;
+    margin-right: auto;
+}
+
+.right5{
+    width:45%;
+    text-align: left;
+    margin-right: auto;
+    /* margin-bottom: 50px;     */
+}
+/* these are images on the reverse rows */
+left3{
+    width:50%;
+    justify-content: left;
+}
+
+.left5{
+    width:45%;
+    justify-content: left;
+    /* margin-bottom: 50px; */  
+}
+.row6{
+    margin-top: -105%;
+    position: relative;
+    z-index: 2;
+}
+.row7{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+.left7col1, .mid7a, .mid7b{
+    width: 24%;
+    display: flex;
+    flex-direction:column;
+    font-size: 10px;
+    margin-right: auto;
+    border: 2px solid black;
+}
+
+.right7a{
+    width: 24%;
+    display: flex;
+    flex-direction:row;
+    font-size: 10px;
+    margin-right: auto;
+    justify-content: left;
+    margin: 20px;
+    border: 2px solid black;
+}
+.right7 p{
+    width: 25%;
+    align-items: bottom;
+    border: 2px solid black;
+}
 }
