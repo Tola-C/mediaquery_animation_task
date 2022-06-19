@@ -264,11 +264,25 @@ body{
     .right2{
         width:45%;
         justify-content: left;
+        margin-left: 0px;
+        margin-right: 40px;
         /* border: 2px solid black; */
     }
+    .left2b{
+        justify-content: left;
+        width: 100%;
+    }
+
+    .getstarted{
+        width: 70%;
+    }
+
+
     .left3{
         width:45%;
         justify-content: left;
+        margin-left: 0px;
+        margin-right: 40px;
     }
     .left4{
         width:45%;
@@ -305,10 +319,12 @@ left3{
 .left5{
     width:45%;
     justify-content: left;
+    margin-left: 0px;
+        margin-right: 40px;
     /* margin-bottom: 50px; */  
 }
 .row6{
-    margin-top: -43%;
+    margin-top: -60%;
     position: relative;
     z-index: 2;
 }
