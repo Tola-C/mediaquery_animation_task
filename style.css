@@ -16,7 +16,6 @@ h2, h3{
 
 p, button{
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
 }
 
 button{
@@ -85,8 +84,11 @@ right1{
 
 .mid7a, .mid7b{
     width: 100%;
+    font-size: 18px;
 }
-
+.left2 p, .right3 p, .right4 p, .right5 p, .left7b p, .left7c p, .left7d p, .right7 p, .mid7a p, .mid7b p{
+    font-size: 18px;
+}
 
 .left2b{
     width: 50%;
@@ -306,7 +308,7 @@ left3{
     /* margin-bottom: 50px; */  
 }
 .row6{
-    margin-top: -105%;
+    margin-top: -43%;
     position: relative;
     z-index: 2;
 }
@@ -318,28 +320,56 @@ left3{
     align-items: center;
     margin:0;
 }
-.left7col1, .mid7a, .mid7b{
-    width: 24%;
+
+.left7 p{
+    font-size:10px;
+    margin-left: 0px;
+
+}
+.left7col1{
+    width: 28%;
     display: flex;
     flex-direction:column;
     font-size: 10px;
-    margin-right: auto;
-    border: 2px solid black;
+    margin-top: 20px;
+    /* margin-right: auto; */
 }
+.mid7a, .mid7b{
+    width: 25%;
+    display: flex;
+    flex-direction:column;
+    font-size: 10px;
+    margin-left:20px;
+    /* margin-right: auto; */
+}
+
+.mid7a p, .mid7b p{
+    width:100px;
+    font-size: 10px;
+    margin-left: 0;
+}
+
 
 .right7a{
     width: 24%;
     display: flex;
     flex-direction:row;
     font-size: 10px;
-    margin-right: auto;
+    /* margin-right: auto; */
     justify-content: left;
-    margin: 20px;
-    border: 2px solid black;
+    /* margin: 20px; */
 }
-.right7 p{
+.right7{
     width: 25%;
     align-items: bottom;
-    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 13%;
+    margin-left: 0%;
+}
+.right7 p{
+    margin-top: 100px;
+    width: 150px;
+    font-size: 8px;
 }
 }
