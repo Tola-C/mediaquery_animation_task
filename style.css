@@ -9,20 +9,188 @@
     --darkcyan: hsl(192, 100%, 9%);
     --grayishblue: hsl(208, 11%, 55%);
 }
-html{
+
+h2, h3{
+    font-family: 'Poppins', sans-serif;
+}
+
+p, button{
     font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+button{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
 }
 
 body{
+    width: 100vh;
+    max-width: 376px;
+
+}
+
+.background{
+    background-color: var(--palecyan);
+    background-image: url("images/bg-hero-mobile.svg");
+    Display: flex;
+    flex-direction:column;
+    width:100%;
+    padding: 3% 5%;
+    color: var(--darkcyan);
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.row1{
+    display: flex;
     width: 100%;
-    align-items: center;
     justify-content: center;
 }
-section{
-    /* background-image: url(images\bg-hero-mobile.svg); */
-    width:90%;
-    /* max-width: 375px; */
+.left1{
+    max-width: 35%;
+    margin-right: auto;
+    padding: 10px 0px;
+}
+right1{
+    max-width: 35%;
+    margin-left: auto;
+}
+.tryfree{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: var(--darkcyan);
+}
+
+.row2{
     display: flex;
-    align-items: center;
     flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px;
+}
+.left2, .right3, .right4, .right5, row6.h3{
+    text-align: center;
+}
+
+.left2 h2, .left2 p, .right3 h3, .right3 p, .right4 h3, .right4 p, .right5 h3, .right5 p, .row6 h3{
+    padding:10px 0px;
+}
+
+.left2b{
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+    padding:10px 0px
+}
+
+.getstarted{
+    width: 110%;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--pink);
+    color: white;
+
+}
+.right2, .left3, .left4, .left5{
+    padding:10px 30px;
+}
+
+.section{
+    Display: flex;
+    width: 100%;
+    max-width: 376px;
+    justify-content: center;
+}
+
+.row3, .row4{
+    Display: flex;
+    flex-direction:column;
+    width:90%;
+    padding: 10px 5%;
+    color: var(--darkcyan);
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightgrey;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row5{Display: flex;
+flex-direction:column;
+width:90%;
+padding: 10px 5%;
+color: var(--darkcyan);
+justify-content: center;
+align-items: center;
+border: 2px solid lightgrey;
+/* margin-bottom: 50px; */
+border-radius: 20px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.getstarted2{
+    width: 50%;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--pink);
+    color: white;
+
+}
+/* create empty space beneath text for overlap area */
+.right5{
+    margin-bottom: 22%; 
+}
+
+/* create overlap using - top margin and background color */
+.row6{
+    Display: flex;
+    flex-direction:column;
+    width:80%;
+    padding: 10px 5%;
+    color: var(--darkcyan);
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightgrey;
+    /* margin-bottom: 50px; */
+    margin-top: -150%;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: white;
+}
+
+/* create space on top of text for overlap area */
+.left7a{
+    margin-top: 25%;
+    color: white;
+}
+
+
+.row7{
+    Display: flex;
+    flex-direction:column;
+    width:90%;
+    padding: 10px 5%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightgrey;
+    margin-top: 0%;
+    /* margin-bottom: 50px; */
+    margin-top: 0%;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    background-color: var(--darkcyan);
 }
