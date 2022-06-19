@@ -23,12 +23,20 @@ button{
     font-size: 10px;
 }
 
-body{
-    width: 100vh;
-    max-width: 376px;
-
+html, body{
+    width: 100%;
+    height: 100%;
+    /* max-width: 376px; */
+    justify-content: center;
+    margin: 0px;
+    overflow-x: hidden;
 }
 
+
+@keyframes changecolor {
+  0%   {top: 0%; background: #d0f0c0; width: 30%;}
+  100% {top: 40%; background: var(--palecyan); width: 100%;}
+}
 .background{
     background-color: var(--palecyan);
     background-image: url("images/bg-hero-mobile.svg");
@@ -39,6 +47,8 @@ body{
     color: var(--darkcyan);
     justify-content: center;
     margin-bottom: 40px;
+    animation: changecolor 5s infinite;
+    animation-iteration-count: 1;
 }
 .row1{
     display: flex;
@@ -120,7 +130,7 @@ right1{
 .row3, .row4{
     Display: flex;
     flex-direction:column;
-    width:90%;
+    width:98%;
     padding: 10px 5%;
     color: var(--darkcyan);
     justify-content: center;
@@ -135,7 +145,7 @@ right1{
 .row5{
 Display: flex;
 flex-direction:column;
-width:90%;
+width:98%;
 padding: 10px 5%;
 color: var(--darkcyan);
 justify-content: center;
@@ -149,7 +159,7 @@ margin-right: auto;
 }
 
 .getstarted2{
-    width: 50%;
+    width: 40%;
     padding: 10px;
     border-radius: 15px;
     border: none;
@@ -163,7 +173,7 @@ margin-right: auto;
 .row6{
     Display: flex;
     flex-direction:column;
-    width:85%;
+    width:95%;
     padding: 10px 5%;
     color: var(--darkcyan);
     justify-content: center;
@@ -225,14 +235,20 @@ margin-right: auto;
 .right7a div{
     padding-right:20px;
 }
-@media screen and (max-width:1440px) and (min-width: 377px)
-{
-body{
-        max-width: 1441px;
+@media screen and (max-width:600px) and (min-width: 377px){
+body, html{
+        /* max-width: 1441px; */
+        justify-content: center;
+        margin:0px;
+        padding:0px;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
     }
 .background
     {
-        background-image: url("images\bg-hero-desktop.svg");
+        background-image: url("images/bg-hero-desktop.svg");
+        /* background-size: contain; */
         width:100%;
     }
 /* convert the columns from mobile view into rows or desktop view */
@@ -243,7 +259,7 @@ body{
         margin:0px;
     }
     .row4{
-            width: 100%;
+            width: 95%;
             flex-flow: row nowrap;
             margin-bottom:50px;
     }
@@ -258,14 +274,13 @@ body{
     .right4{
         width:45%;
         text-align: left;
-        
+        margin-left: auto;        
     }
     /* center the image halves for each row */
     .right2{
         width:45%;
-        justify-content: left;
-        margin-left: 0px;
-        margin-right: 40px;
+        justify-content: center;
+        margin-left: auto;
         /* border: 2px solid black; */
     }
     .left2b{
@@ -274,15 +289,14 @@ body{
     }
 
     .getstarted{
-        width: 70%;
+        width: 50%;
     }
 
 
     .left3{
         width:45%;
         justify-content: left;
-        margin-left: 0px;
-        margin-right: 40px;
+        margin-left: auto;
     }
     .left4{
         width:45%;
@@ -293,7 +307,7 @@ body{
     }
     /* convert colums to rows and reverse order to match layout */
     .row3, .row5 {
-        width: 100%;
+        width: 95%;
         flex-flow: row-reverse;
     }
 
@@ -313,20 +327,21 @@ body{
 /* these are images on the reverse rows */
 left3{
     width:50%;
-    justify-content: left;
+    justify-content: center;
+    margin-right: 2px;
 }
 
 .left5{
     width:45%;
-    justify-content: left;
-    margin-left: 0px;
-        margin-right: 40px;
+    justify-content: center;
+    margin-left: auto;
     /* margin-bottom: 50px; */  
 }
 .row6{
-    margin-top: -60%;
+    margin-top: -57%;
     position: relative;
     z-index: 2;
+    width: 83%;
 }
 .row7{
     display: flex;
@@ -340,6 +355,7 @@ left3{
 .left7 p{
     font-size:10px;
     margin-left: 0px;
+    width: 80%;
 
 }
 .left7col1{
@@ -347,8 +363,348 @@ left3{
     display: flex;
     flex-direction:column;
     font-size: 10px;
-    margin-top: 20px;
+    margin-top: 0px;
     /* margin-right: auto; */
+}
+
+.left7a{
+    margin-top: 4%;
+    width: 100%;
+}
+.mid7a, .mid7b{
+    width: 25%;
+    display: flex;
+    flex-direction:column;
+    font-size: 10px;
+    margin-left:20px;
+    /* margin-right: auto; */
+}
+
+.mid7a p, .mid7b p{
+    width:100px;
+    font-size: 10px;
+    margin-left: 0;
+}
+
+
+.right7a{
+    width: 24%;
+    display: flex;
+    flex-direction:row;
+    font-size: 10px;
+    /* margin-right: auto; */
+    justify-content: left;
+    /* margin: 20px; */
+}
+.right7{
+    width: 25%;
+    align-items: bottom;
+    display: flex;
+    flex-direction: column;
+    margin-top: 13%;
+    margin-left: 0%;
+}
+.right7 p{
+    margin-top: 100px;
+    width: 150px;
+    font-size: 8px;
+}
+}
+@media screen and (max-width:900px) and (min-width: 601px){
+    .row6{
+        margin-top: -42%;
+        position: relative;
+        z-index: 2;
+        width: 83%;
+    } 
+    .background
+    {
+        background-image: url("images/bg-hero-desktop.svg");
+        /* background-size: contain; */
+        width:100%;
+    }
+/* convert the columns from mobile view into rows or desktop view */
+    .row2 
+    {
+        width: 100%;
+        flex-flow: row nowrap;
+        margin:0px;
+    }
+    .row4{
+            width: 95%;
+            flex-flow: row nowrap;
+            margin-bottom:50px;
+    }
+    /* align the text halves for each row to the left */
+    .left2
+    {
+        width:45%;
+        text-align: left;
+        margin-right: auto;
+        /* border: 2px solid black; */
+    }
+    .right4{
+        width:45%;
+        text-align: left;
+        margin-left: auto;        
+    }
+    /* center the image halves for each row */
+    .right2{
+        width:45%;
+        justify-content: center;
+        margin-left: auto;
+        /* border: 2px solid black; */
+    }
+    .left2b{
+        justify-content: left;
+        width: 100%;
+    }
+
+    .getstarted{
+        width: 50%;
+    }
+
+
+    .left3{
+        width:45%;
+        justify-content: left;
+        margin-left: auto;
+    }
+    .left4{
+        width:45%;
+        justify-content: left;
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-right: auto;
+    }
+    /* convert colums to rows and reverse order to match layout */
+    .row3, .row5 {
+        width: 95%;
+        flex-flow: row-reverse;
+    }
+
+/* these are texts on the reversed rows */
+.right3{
+    width:45%;
+    text-align: left;
+    margin-right: auto;
+}
+
+.right5{
+    width:45%;
+    text-align: left;
+    margin-right: auto;
+    /* margin-bottom: 50px;     */
+}
+/* these are images on the reverse rows */
+left3{
+    width:50%;
+    justify-content: center;
+    margin-right: 2px;
+}
+
+.left5{
+    width:45%;
+    justify-content: center;
+    margin-left: auto;
+    /* margin-bottom: 50px; */  
+}
+
+.row7{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+
+.left7 p{
+    font-size:10px;
+    margin-left: 0px;
+    width: 80%;
+
+}
+.left7col1{
+    width: 28%;
+    display: flex;
+    flex-direction:column;
+    font-size: 10px;
+    margin-top: 0px;
+    /* margin-right: auto; */
+}
+
+.left7a{
+    margin-top: 4%;
+    width: 100%;
+}
+.mid7a, .mid7b{
+    width: 25%;
+    display: flex;
+    flex-direction:column;
+    font-size: 10px;
+    margin-left:20px;
+    /* margin-right: auto; */
+}
+
+.mid7a p, .mid7b p{
+    width:100px;
+    font-size: 10px;
+    margin-left: 0;
+}
+
+
+.right7a{
+    width: 24%;
+    display: flex;
+    flex-direction:row;
+    font-size: 10px;
+    /* margin-right: auto; */
+    justify-content: left;
+    /* margin: 20px; */
+}
+.right7{
+    width: 25%;
+    align-items: bottom;
+    display: flex;
+    flex-direction: column;
+    margin-top: 13%;
+    margin-left: 0%;
+}
+.right7 p{
+    margin-top: 100px;
+    width: 150px;
+    font-size: 8px;
+}
+}
+
+@media screen and (max-width:1441px) and (min-width: 901px){
+    .row6{
+        margin-top: -30%;
+        position: relative;
+        z-index: 2;
+        width: 83%;
+    } 
+    .background
+    {
+        background-image: url("images/bg-hero-desktop.svg");
+        /* background-size: contain; */
+        width:100%;
+    }
+/* convert the columns from mobile view into rows or desktop view */
+    .row2 
+    {
+        width: 100%;
+        flex-flow: row nowrap;
+        margin:0px;
+    }
+    .row4{
+            width: 95%;
+            flex-flow: row nowrap;
+            margin-bottom:50px;
+    }
+    /* align the text halves for each row to the left */
+    .left2
+    {
+        width:45%;
+        text-align: left;
+        margin-right: auto;
+        /* border: 2px solid black; */
+    }
+    .right4{
+        width:45%;
+        text-align: left;
+        margin-left: auto;        
+    }
+    /* center the image halves for each row */
+    .right2{
+        width:45%;
+        justify-content: center;
+        margin-left: auto;
+        /* border: 2px solid black; */
+    }
+    .left2b{
+        justify-content: left;
+        width: 100%;
+    }
+
+    .getstarted{
+        width: 50%;
+    }
+
+
+    .left3{
+        width:45%;
+        justify-content: left;
+        margin-left: auto;
+    }
+    .left4{
+        width:45%;
+        justify-content: left;
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-right: auto;
+    }
+    /* convert colums to rows and reverse order to match layout */
+    .row3, .row5 {
+        width: 95%;
+        flex-flow: row-reverse;
+    }
+
+/* these are texts on the reversed rows */
+.right3{
+    width:45%;
+    text-align: left;
+    margin-right: auto;
+}
+
+.right5{
+    width:45%;
+    text-align: left;
+    margin-right: auto;
+    /* margin-bottom: 50px;     */
+}
+/* these are images on the reverse rows */
+left3{
+    width:50%;
+    justify-content: center;
+    margin-right: 2px;
+}
+
+.left5{
+    width:45%;
+    justify-content: center;
+    margin-left: auto;
+    /* margin-bottom: 50px; */  
+}
+
+.row7{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+
+.left7 p{
+    font-size:10px;
+    margin-left: 0px;
+    width: 80%;
+
+}
+.left7col1{
+    width: 28%;
+    display: flex;
+    flex-direction:column;
+    font-size: 10px;
+    margin-top: 0px;
+    /* margin-right: auto; */
+}
+
+.left7a{
+    margin-top: 4%;
+    width: 100%;
 }
 .mid7a, .mid7b{
     width: 25%;
