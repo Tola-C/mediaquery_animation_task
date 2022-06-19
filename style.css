@@ -72,6 +72,9 @@ right1{
     background-color: white;
     color: var(--darkcyan);
 }
+.tryfree:hover, .tryfree:active{
+    cursor: pointer;
+}
 
 .row2{
     display: flex;
@@ -114,7 +117,9 @@ right1{
     border: none;
     background-color: var(--pink);
     color: white;
-
+}
+.getstarted:hover, .getstarted:active{
+    cursor: pointer;
 }
 .right2, .left3, .left4, .left5{
     padding:10px 30px;
@@ -165,7 +170,10 @@ margin-right: auto;
     border: none;
     background-color: var(--pink);
     color: white;
+}
 
+.getstarted2:hover, .getstarted2:active{
+    cursor: pointer;
 }
 /* create empty space beneath text for overlap area */
 
@@ -180,7 +188,7 @@ margin-right: auto;
     align-items: center;
     border: 2px solid lightgrey;
     /* margin-bottom: 50px; */
-    margin-top: -190%;
+    margin-top: -194%;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -192,7 +200,7 @@ margin-right: auto;
 
 /* create space on top of text for overlap area */
 .left7a{
-    margin-top: 30%;
+    margin-top: 32%;
     width: 100%;
 }
 
