@@ -1,3 +1,4 @@
+/* Begin by building the mobile view first */
 *{
     margin:0;
     padding:0;
@@ -22,7 +23,7 @@ button{
     font-family: 'Open Sans', sans-serif;
     font-size: 10px;
 }
-
+/* set to ensure no white space */
 html, body{
     width: 100%;
     height: 100%;
@@ -37,6 +38,7 @@ html, body{
   0%   {top: 0%; background: #d0f0c0; width: 30%;}
   100% {top: 40%; background: var(--palecyan); width: 100%;}
 }
+/* The background container is a combinatin of 4 divs: row 1 and row 2 */
 .background{
     background-color: var(--palecyan);
     background-image: url("images/bg-hero-mobile.svg");
@@ -55,6 +57,8 @@ html, body{
     width: 100%;
     justify-content: center;
 }
+
+/* the rows are a combination of 2 parent divs, left and right */
 .left1{
     max-width: 35%;
     margin-right: auto;
@@ -64,6 +68,7 @@ right1{
     max-width: 35%;
     margin-left: auto;
 }
+/* the Try it free button in row 1 */
 .tryfree{
     width: 100%;
     padding: 10px;
@@ -84,13 +89,17 @@ right1{
     align-items: center;
     padding: 15px 0px;
 }
+
+/* Align all text in all rows center */
 .left2, .right3, .right4, .right5, row6.h3{
     text-align: center;
 }
-
+/* space out the headers from the text evenly in all rows */
 .left2 h2, .left2 p, .right3 h3, .right3 p, .right4 h3, .right4 p, .right5 h3, .right5 p, .row6 h3, .left7b p, .left7c p, .left7d p, .right7 p, .mid7a p, .mid7b p{
     padding:10px 0px;
 }
+
+/* Set text width to ensure free flow across their left or right containers */
 .left7b p, .left7c, .left7d p, .right7 p, .mid7a p, .mid7b p{
    width: 100%;
 }
@@ -109,7 +118,7 @@ right1{
     margin: auto;
     padding:10px 0px
 }
-
+/* set parameters for the first pink button titled Get started now */
 .getstarted{
     width: 110%;
     padding: 10px;
@@ -121,18 +130,14 @@ right1{
 .getstarted:hover, .getstarted:active{
     cursor: pointer;
 }
+
+/* set padding for all images in each row */
 .right2, .left3, .left4, .left5{
     padding:10px 30px;
 }
 
-.section{
-    Display: flex;
-    width: 100%;
-    max-width: 376px;
-    justify-content: center;
-}
-
-.row3, .row4{
+/* set parameters for the identical rows */
+.row3, .row4, .row5{
     Display: flex;
     flex-direction:column;
     width:98%;
@@ -146,23 +151,12 @@ right1{
     margin-left: auto;
     margin-right: auto;
 }
-
+/* row 5 has a slightly larger bottom margin to accommodate the overlay */
 .row5{
-Display: flex;
-flex-direction:column;
-width:98%;
-padding: 10px 5%;
-color: var(--darkcyan);
-justify-content: center;
-align-items: center;
-border: 2px solid lightgrey;
-margin-bottom: 20%;
-border-radius: 20px;
-margin-left: auto;
-margin-right: auto;
-
+margin-bottom: 5%;
 }
 
+/* set parameters for the second pink get started button */
 .getstarted2{
     width: 40%;
     padding: 10px;
@@ -175,9 +169,8 @@ margin-right: auto;
 .getstarted2:hover, .getstarted2:active{
     cursor: pointer;
 }
-/* create empty space beneath text for overlap area */
 
-/* create overlap using - top margin and background color */
+/* create overlap using margin and positioning with zindex */
 .row6{
     Display: flex;
     flex-direction:column;
@@ -187,8 +180,8 @@ margin-right: auto;
     justify-content: center;
     align-items: center;
     border: 2px solid lightgrey;
-    /* margin-bottom: 50px; */
-    margin-top: -194%;
+    margin-bottom: -15%;
+    /* margin-top: -194%; */
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -212,9 +205,9 @@ margin-right: auto;
 .left7b img, .left7c img, .left7d img{
     padding-top: 15px;
     margin-right: 20px;
-    border: 2px white;;
+    border: 2px white;
 }
-
+/* set parameters for the footer row */
 .row7{
     Display: flex;
     flex-direction:column;
@@ -243,8 +236,11 @@ margin-right: auto;
 .right7a div{
     padding-right:20px;
 }
-@media screen and (max-width:600px) and (min-width: 377px){
-body, html{
+/* The adjustments made for desktop view */
+@media screen and (max-width:1441px) and (min-width: 376px){
+
+/* set these to remove any white space */
+    body, html{
         /* max-width: 1441px; */
         justify-content: center;
         margin:0px;
@@ -253,6 +249,8 @@ body, html{
         height: 100%;
         overflow-x: hidden;
     }
+
+    /* Insert the proper size of background image */
 .background
     {
         background-image: url("images/bg-hero-desktop.svg");
@@ -269,7 +267,6 @@ body, html{
     .row4{
             width: 95%;
             flex-flow: row nowrap;
-            margin-bottom:50px;
     }
     /* align the text halves for each row to the left */
     .left2
@@ -277,35 +274,38 @@ body, html{
         width:45%;
         text-align: left;
         margin-right: auto;
-        /* border: 2px solid black; */
-    }
-    .right4{
-        width:45%;
-        text-align: left;
-        margin-left: auto;        
-    }
-    /* center the image halves for each row */
-    .right2{
-        width:45%;
-        justify-content: center;
         margin-left: auto;
         /* border: 2px solid black; */
     }
+    /* Add 30% left margin to march up with row 3  above */
+    .right4
+    {
+        width:45%;
+        text-align: left;
+        margin-right: auto;
+        margin-left: 30%;
+        /* border: 2px solid black; */
+    }
+    /* center the image halves for each row */
+    .right2, .left3{
+        width:45%;
+        justify-content: center;
+        margin-left: 30%;
+    }
+    .left3{
+        margin-left: 30%;
+        margin-right: 0px;
+    }
+
+    /* Align the pink get started button left and reduce its width*/
     .left2b{
         justify-content: left;
         width: 100%;
     }
-
     .getstarted{
         width: 50%;
     }
 
-
-    .left3{
-        width:45%;
-        justify-content: left;
-        margin-left: auto;
-    }
     .left4{
         width:45%;
         justify-content: left;
@@ -320,37 +320,26 @@ body, html{
     }
 
 /* these are texts on the reversed rows */
-.right3{
+.right3, .right5{
     width:45%;
     text-align: left;
     margin-right: auto;
 }
 
-.right5{
-    width:45%;
-    text-align: left;
-    margin-right: auto;
-    /* margin-bottom: 50px;     */
-}
-/* these are images on the reverse rows */
-left3{
-    width:50%;
-    justify-content: center;
-    margin-right: 2px;
-}
-
-.left5{
+/* Add 30% left margin to match up with rows 3 and 4 above */
+.left5 {
     width:45%;
     justify-content: center;
-    margin-left: auto;
-    /* margin-bottom: 50px; */  
+    margin-left: 30%; 
 }
+/* Adjust parameters for the overlaid row 6 */
 .row6{
-    margin-top: -57%;
-    position: relative;
-    z-index: 2;
+    margin-bottom: -4%;
+    margin-top: 0px;
     width: 83%;
 }
+
+/* Adjust row 7 to acomodate overlay */
 .row7{
     display: flex;
     width:100%;
@@ -370,8 +359,10 @@ left3{
     width: 28%;
     display: flex;
     flex-direction:column;
+    justify-content: center;
     font-size: 10px;
     margin-top: 0px;
+    margin-left: 6%;
     /* margin-right: auto; */
 }
 
@@ -391,7 +382,7 @@ left3{
 .mid7a p, .mid7b p{
     width:100px;
     font-size: 10px;
-    margin-left: 0;
+    margin-left: 25%;
 }
 
 
@@ -417,339 +408,7 @@ left3{
     width: 150px;
     font-size: 8px;
 }
-}
-@media screen and (max-width:900px) and (min-width: 601px){
-    .row6{
-        margin-top: -42%;
-        position: relative;
-        z-index: 2;
-        width: 83%;
-    } 
-    .background
-    {
-        background-image: url("images/bg-hero-desktop.svg");
-        /* background-size: contain; */
-        width:100%;
-    }
-/* convert the columns from mobile view into rows or desktop view */
-    .row2 
-    {
-        width: 100%;
-        flex-flow: row nowrap;
-        margin:0px;
-    }
-    .row4{
-            width: 95%;
-            flex-flow: row nowrap;
-            margin-bottom:50px;
-    }
-    /* align the text halves for each row to the left */
-    .left2
-    {
-        width:45%;
-        text-align: left;
-        margin-right: auto;
-        /* border: 2px solid black; */
-    }
-    .right4{
-        width:45%;
-        text-align: left;
-        margin-left: auto;        
-    }
-    /* center the image halves for each row */
-    .right2{
-        width:45%;
-        justify-content: center;
-        margin-left: auto;
-        /* border: 2px solid black; */
-    }
-    .left2b{
-        justify-content: left;
-        width: 100%;
-    }
-
-    .getstarted{
-        width: 50%;
-    }
-
-
-    .left3{
-        width:45%;
-        justify-content: left;
-        margin-left: auto;
-    }
-    .left4{
-        width:45%;
-        justify-content: left;
-        margin-left: 0px;
-        padding-left: 0px;
-        margin-right: auto;
-    }
-    /* convert colums to rows and reverse order to match layout */
-    .row3, .row5 {
-        width: 95%;
-        flex-flow: row-reverse;
-    }
-
-/* these are texts on the reversed rows */
-.right3{
-    width:45%;
-    text-align: left;
-    margin-right: auto;
-}
-
-.right5{
-    width:45%;
-    text-align: left;
-    margin-right: auto;
-    /* margin-bottom: 50px;     */
-}
-/* these are images on the reverse rows */
-left3{
-    width:50%;
-    justify-content: center;
-    margin-right: 2px;
-}
-
-.left5{
-    width:45%;
-    justify-content: center;
-    margin-left: auto;
-    /* margin-bottom: 50px; */  
-}
-
-.row7{
-    display: flex;
-    width:100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin:0;
-}
-
-.left7 p{
-    font-size:10px;
-    margin-left: 0px;
-    width: 80%;
-
-}
-.left7col1{
-    width: 28%;
-    display: flex;
-    flex-direction:column;
-    font-size: 10px;
-    margin-top: 0px;
-    /* margin-right: auto; */
-}
-
-.left7a{
-    margin-top: 4%;
-    width: 100%;
-}
-.mid7a, .mid7b{
-    width: 25%;
-    display: flex;
-    flex-direction:column;
-    font-size: 10px;
-    margin-left:20px;
-    /* margin-right: auto; */
-}
-
-.mid7a p, .mid7b p{
-    width:100px;
-    font-size: 10px;
-    margin-left: 0;
-}
-
-
-.right7a{
-    width: 24%;
-    display: flex;
-    flex-direction:row;
-    font-size: 10px;
-    /* margin-right: auto; */
-    justify-content: left;
-    /* margin: 20px; */
-}
-.right7{
-    width: 25%;
-    align-items: bottom;
-    display: flex;
-    flex-direction: column;
-    margin-top: 13%;
-    margin-left: 0%;
-}
-.right7 p{
-    margin-top: 100px;
-    width: 150px;
-    font-size: 8px;
-}
-}
-
-@media screen and (max-width:1441px) and (min-width: 901px){
-    .row6{
-        margin-top: -30%;
-        position: relative;
-        z-index: 2;
-        width: 83%;
-    } 
-    .background
-    {
-        background-image: url("images/bg-hero-desktop.svg");
-        /* background-size: contain; */
-        width:100%;
-    }
-/* convert the columns from mobile view into rows or desktop view */
-    .row2 
-    {
-        width: 100%;
-        flex-flow: row nowrap;
-        margin:0px;
-    }
-    .row4{
-            width: 95%;
-            flex-flow: row nowrap;
-            margin-bottom:50px;
-    }
-    /* align the text halves for each row to the left */
-    .left2
-    {
-        width:45%;
-        text-align: left;
-        margin-right: auto;
-        /* border: 2px solid black; */
-    }
-    .right4{
-        width:45%;
-        text-align: left;
-        margin-left: auto;        
-    }
-    /* center the image halves for each row */
-    .right2{
-        width:45%;
-        justify-content: center;
-        margin-left: auto;
-        /* border: 2px solid black; */
-    }
-    .left2b{
-        justify-content: left;
-        width: 100%;
-    }
-
-    .getstarted{
-        width: 50%;
-    }
-
-
-    .left3{
-        width:45%;
-        justify-content: left;
-        margin-left: auto;
-    }
-    .left4{
-        width:45%;
-        justify-content: left;
-        margin-left: 0px;
-        padding-left: 0px;
-        margin-right: auto;
-    }
-    /* convert colums to rows and reverse order to match layout */
-    .row3, .row5 {
-        width: 95%;
-        flex-flow: row-reverse;
-    }
-
-/* these are texts on the reversed rows */
-.right3{
-    width:45%;
-    text-align: left;
-    margin-right: auto;
-}
-
-.right5{
-    width:45%;
-    text-align: left;
-    margin-right: auto;
-    /* margin-bottom: 50px;     */
-}
-/* these are images on the reverse rows */
-left3{
-    width:50%;
-    justify-content: center;
-    margin-right: 2px;
-}
-
-.left5{
-    width:45%;
-    justify-content: center;
-    margin-left: auto;
-    /* margin-bottom: 50px; */  
-}
-
-.row7{
-    display: flex;
-    width:100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin:0;
-}
-
-.left7 p{
-    font-size:10px;
-    margin-left: 0px;
-    width: 80%;
-
-}
-.left7col1{
-    width: 28%;
-    display: flex;
-    flex-direction:column;
-    font-size: 10px;
-    margin-top: 0px;
-    /* margin-right: auto; */
-}
-
-.left7a{
-    margin-top: 4%;
-    width: 100%;
-}
-.mid7a, .mid7b{
-    width: 25%;
-    display: flex;
-    flex-direction:column;
-    font-size: 10px;
-    margin-left:20px;
-    /* margin-right: auto; */
-}
-
-.mid7a p, .mid7b p{
-    width:100px;
-    font-size: 10px;
-    margin-left: 0;
-}
-
-
-.right7a{
-    width: 24%;
-    display: flex;
-    flex-direction:row;
-    font-size: 10px;
-    /* margin-right: auto; */
-    justify-content: left;
-    /* margin: 20px; */
-}
-.right7{
-    width: 25%;
-    align-items: bottom;
-    display: flex;
-    flex-direction: column;
-    margin-top: 13%;
-    margin-left: 0%;
-}
-.right7 p{
-    margin-top: 100px;
-    width: 150px;
-    font-size: 8px;
+.left7c img, .left7d img{
+    padding-top: 10px;
 }
 }
